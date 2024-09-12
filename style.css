@@ -82,15 +82,17 @@ body {
 
 .avatar-canvas {
   position: relative;
-  width: 100%; /* 10% smaller size */
+  width: 90%; /* Slightly smaller width */
+  max-width: 650px; /* Max size to prevent excessive growth */
   background-color: #3333333b;
   border: 1px solid #ccc;
-  aspect-ratio: 1;
+  aspect-ratio: 1; /* Ensures a 1:1 ratio */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
 }
+
 
 .avatar-canvas img.trait {
   position: absolute;
@@ -270,7 +272,7 @@ button#randomizeBtn:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin-top: 16px;
 }
 
