@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <img src="images/main-logo.png" alt="Logo"> <!-- Update with your logo path -->
+    </div>
+    <div class="nav-buttons">
+      <button onclick="window.location.href='main-site-url'">Back to Main Site</button> <!-- Update with your main site URL -->
+    </div>
+  </div>  
+
+  <div class="container">
+    <!-- Left Column: Avatar Canvas -->
+    <div class="avatar-column">
+      <div class="avatar-canvas">
+        <img id="background" class="trait" src="" alt="Background">
+        <img id="face" class="trait" src="" alt="Face">
+        <img id="eyes" class="trait" src="" alt="Eyes">
+        <img id="mouth" class="trait" src="" alt="Mouth">
+        <img id="clothing" class="trait" src="" alt="Clothing">
+        <img id="accessories" class="trait" src="" alt="Accessories">
+        <img id="hats" class="trait" src="" alt="Hats">
+      </div>
+      <!-- Button container (Download + Randomize Buttons) -->
+      <div class="button-container">
+        <!-- Download Button -->
+        <button id="downloadBtn" onclick="downloadAvatar()">
+          Download Avatar
+          <span class="download-icon"></span>
+        </button>
+
+        <!-- Randomize Button -->
+        <button id="randomizeBtn" onclick="randomizeTraits()">
+          Randomize Avatar
+          <span class="randomize-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Column: Tabbed Trait Controls -->
+    <div class="controller-column">
+      <!-- Tab Headers -->
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Background')">Background</button>
+        <button class="tablinks" onclick="openTab(event, 'Face')">Face</button>
+        <button class="tablinks" onclick="openTab(event, 'Eyes')">Eyes</button>
+        <button class="tablinks" onclick="openTab(event, 'Mouth')">Mouth</button>
+        <button class="tablinks" onclick="openTab(event, 'Clothes')">Clothes</button>
+        <button class="tablinks" onclick="openTab(event, 'Accessories')">Accessories</button>
+        <button class="tablinks" onclick="openTab(event, 'Hats')">Hats</button>
+      </div>
+
+      <!-- Tab Content for Background -->
+      <div id="Background" class="tabcontent">
+          <div class="trait-selector" id="backgroundSelector"></div>
+      </div>
+
+      <!-- Tab Content for Face -->
+      <div id="Face" class="tabcontent">
+          <div class="trait-selector" id="faceSelector"></div>
+      </div>
+
+      <!-- Tab Content for Eyes -->
+      <div id="Eyes" class="tabcontent">
+          <div class="trait-selector" id="eyesSelector"></div>
+      </div>
+
+      <!-- Tab Content for Mouth -->
+      <div id="Mouth" class="tabcontent">
+          <div class="trait-selector" id="mouthSelector"></div>
+      </div>
+
+      <!-- Tab Content for Clothes -->
+      <div id="Clothes" class="tabcontent">
+          <div class="trait-selector" id="clothingSelector"></div>
+      </div>
+
+      <!-- Tab Content for Accessories -->
+      <div id="Accessories" class="tabcontent">
+          <div class="trait-selector" id="accessoriesSelector"></div>
+      </div>
+
+      <!-- Tab Content for Hats -->
+      <div id="Hats" class="tabcontent">
+        <div class="trait-slider-wrapper">
+          <div class="trait-selector" id="hatsSelector"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
