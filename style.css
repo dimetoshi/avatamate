@@ -82,7 +82,7 @@ body {
 
 .avatar-canvas {
   position: relative;
-  width: 90%; /* Slightly smaller width */
+  width: 98%; /* Slightly smaller width */
   max-width: 650px; /* Max size to prevent excessive growth */
   background-color: #3333333b;
   border: 1px solid #ccc;
@@ -330,7 +330,6 @@ button#randomizeBtn:hover {
     width: 100px;
     pointer-events: none;
     z-index: 1;
-    background: linear-gradient(to left, #101010, rgba(0, 0, 0, 0));
   }
 
   /* Make tablinks buttons grow dynamically, increase font size */
