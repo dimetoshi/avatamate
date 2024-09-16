@@ -16,28 +16,29 @@ body {
 /* Navbar styling */
 .navbar {
   width: 100%;
+  height: 60px;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 32px 20px 32px; /* Padding for navbar */
+  padding: 16px; /* Padding for navbar */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  border-bottom: 0px solid rgba(255, 255, 255, 0.5); /* 0.5px bottom border with 50% white opacity */
+  border-bottom: 0.5px solid #1d1e23; /* 0.5px bottom border with 50% white opacity */
 }
 
 .nav-logo img {
-  width: 100px;
+  width: 80px;
 }
 
 .nav-buttons button {
-  background-color: #ffffff0d;
+  background-color: #ffffff0c;
   color: #ffffff;
   padding: 12px 20px;
-  border: 1px solid #ffffff39;
-  border-radius: opx;
+  border: 0px solid #ffffff39;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -51,29 +52,30 @@ body {
   position: absolute;
   bottom: 0; /* Fix to the bottom */
   width: 100%;
-  height: calc(100vh - 56px); /* Adjust height to account for navbar */
+  height: calc(100vh - 60px); /* Adjust height to account for navbar */
   padding: 0;
   margin-top: 0;
 }
 
 .avatar-column {
-  width: 50%; /* 50% width for larger screens */
+  width: 46%; /* 50% width for larger screens */
   height: 100%; /* Full height */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center */
   align-items: center; /* Horizontally center */
-  padding: 32px 32px 32px 32px;
-  background-color: #101010; /* Mid-grey background */
+  padding: 16px 16px 16px 16px;
+  border-right: 0.5px solid #1d1e23;
+  background-color: #121315; /* Mid-grey background */
 }
 
 .controller-column {
-  width: 50%; /* 50% width for larger screens */
+  width: 54%; /* 50% width for larger screens */
   height: 100%;
   position: relative;
-  background-color: #101010; /* Mid-grey background */
+  background-color: #121315; /* Mid-grey background */
   backdrop-filter: blur(20px);
-  padding: 32px 32px 32px 32px;
+  padding: 20px;
   border-radius: 8px;
   box-sizing: border-box;
   background-image: url('grain-texture.png');
@@ -84,15 +86,16 @@ body {
   position: relative;
   width: 98%; /* Slightly smaller width */
   max-width: 650px; /* Max size to prevent excessive growth */
-  background-color: #3333333b;
-  border: 1px solid #ccc;
+  background-color: #121315;
+  border: 0.5px solid rgba(255, 255, 255, 0.122);
+  border-radius: 10px;
   aspect-ratio: 1; /* Ensures a 1:1 ratio */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
+  overflow: hidden; /* Prevent overflow from resizing */
 }
-
 
 .avatar-canvas img.trait {
   position: absolute;
@@ -101,24 +104,53 @@ body {
   object-fit: fill;
 }
 
-/* z-index rules for layer stacking */
-#accessories {
-  z-index: 6; /* Highest z-index for traits */
+/* Download Button */
+button#downloadBtn {
+  background-color: #ffffff0c;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 16px 16px;
+  border: 0px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
 }
-#hats {
-  z-index: 5; /* Lowest z-index for clothing */
+
+button#downloadBtn .download-icon {
+  display: inline-block;
+  background: url('images/dwnload-icon.png') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
 }
-#eyes {
-  z-index: 4; /* Higher z-index for eyes */
+
+/* Download Button Hover Effect */
+button#downloadBtn:hover {
+  background-color: rgba(14, 14, 14, 0.741);
+  color: #ffffff;
 }
-#mouth {
-  z-index: 3; /* Lower z-index for mouth */
+
+/* Click Effect */
+button#downloadBtn:active {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
 }
-#face {
-  z-index: 2; /* Lowest z-index for clothing */
-}
-#clothing {
-  z-index: 1; /* Lowest z-index for clothing */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.212);
+  border-radius: 10px;
 }
 
 /* Main styling for tablinks buttons */
@@ -143,7 +175,7 @@ body {
   background-color: transparent;
   color: white;
   padding: 12px 0px 12px 0px;
-  border: 0.5px solid rgba(255, 255, 255, 0.212);
+  border: 0px solid rgba(255, 255, 255, 0.212);
   border-radius: 0px;
   cursor: pointer;
   text-align: center;
@@ -197,52 +229,15 @@ body {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Download Button */
-button#downloadBtn {
-  background-color: #ffffff0c;
-  color: #ffffff;
-  font-size: 15px;
-  padding: 12px 16px 12px 16px;
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0px;
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-align: center;
-  transition: background-color 0.1s ease, border-color 0.1s ease;
-}
-
-button#downloadBtn .download-icon {
-  display: inline-block;
-  background: url('images/dwnload-icon.png') no-repeat center center;
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-}
-
-/* Download Button Hover Effect */
-button#downloadBtn:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-}
-
-/* Click Effect */
-button#downloadBtn:active {
-  background-color: rgba(255, 255, 255, 1);
-  color: #000000;
-}
-
 /* Randomize Button */
 button#randomizeBtn {
+  
   background-color: #ffffff0c;
   color: #ffffff;
   font-size: 15px;
-  padding: 12px 16px 12px 16px;
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0px;
+  padding: 16px 16px;
+  border: 0px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -263,7 +258,7 @@ button#randomizeBtn .randomize-icon {
 
 /* Randomize Button Hover Effect */
 button#randomizeBtn:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(14, 14, 14, 0.741);
   color: #ffffff;
 }
 
@@ -272,8 +267,11 @@ button#randomizeBtn:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin-top: 16px;
+  width: 99%;
+  margin-top: 4px;
+  padding: 12px 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 /* Responsive Layout */
@@ -287,18 +285,19 @@ button#randomizeBtn:hover {
     flex-direction: column;
     align-items: center;
     gap: 0px;
-    margin-top: 56px;
+    margin-top: 60px;
     height: auto; /* Allow content to expand */
     position: relative; /* For mobile, no fixed bottom positioning */
   }
 
   .controller-column {
     width: 100%;
-    padding: 0px 32px 32px 32px;
+    padding: 0px;
   }
 
   .avatar-column {
     width: 100%;
+    padding: 12px;
   }
 
   .tab {
@@ -307,9 +306,9 @@ button#randomizeBtn:hover {
     align-items: center;
     margin-bottom: 4px;
     width: 100%;
-    padding: 10px 32px 10px 0;
+    padding: 10px 32px 10px 32px;
     overflow-x: auto;
-    gap: 8px;
+    gap: 4px;
     white-space: nowrap;
     position: relative;
     -ms-overflow-style: none;
@@ -337,8 +336,23 @@ button#randomizeBtn:hover {
     flex-grow: 1; /* Allow tablinks to grow dynamically */
     width: auto;
     font-size: calc(16px);
-    padding: 10px 20px;
+    color: #ffffff;
+    padding: 16px 20px;
+    background-color: rgba(255, 255, 255, 0.023);
+    border-radius: 2px;
+
   }
+
+  /* Active state styling */
+.tab button.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Hover Effect */
+.tab button.tablinks:hover {
+  cursor: pointer;
+}
 
   /* Ensure the trait-selector divs span 100% */
   .trait-selector {
