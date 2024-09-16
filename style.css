@@ -67,6 +67,7 @@ body {
   padding: 16px 16px 16px 16px;
   border-right: 0.5px solid #1d1e23;
   background-color: #121315; /* Mid-grey background */
+  top-margin: 4px;
 }
 
 .controller-column {
