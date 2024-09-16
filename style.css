@@ -300,6 +300,18 @@ button#randomizeBtn:hover {
     padding: 12px;
   }
 
+    /* Button container (Download + Randomize Buttons) */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  margin-top: 4px;
+  padding: 0px 0px;
+  border: 00px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
   .tab {
     display: flex;
     justify-content: flex-start;
@@ -335,7 +347,7 @@ button#randomizeBtn:hover {
   .tab button.tablinks {
     flex-grow: 1; /* Allow tablinks to grow dynamically */
     width: auto;
-    font-size: calc(16px);
+    font-size: calc(14px);
     color: #ffffff;
     padding: 16px 20px;
     background-color: rgba(255, 255, 255, 0.023);
@@ -365,4 +377,6 @@ button#randomizeBtn:hover {
   .tabcontent, .trait-slider-wrapper {
     width: 100%;
   }
+
+  
 }
