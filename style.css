@@ -86,7 +86,7 @@ body {
 .avatar-canvas {
   position: relative;
   width: 98%; /* Slightly smaller width */
-  max-width: 650px; /* Max size to prevent excessive growth */
+  max-width: 98%; /* Max size to prevent excessive growth */
   background-color: #121315;
   border: 0.5px solid rgba(255, 255, 255, 0.122);
   border-radius: 10px;
@@ -94,7 +94,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
+  margin-top: 16px;
   overflow: hidden; /* Prevent overflow from resizing */
 }
 
@@ -369,7 +370,7 @@ button#randomizeBtn:hover {
 
   /* Ensure the trait-selector divs span 100% */
   .trait-selector {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
     padding: 8px;
   }
