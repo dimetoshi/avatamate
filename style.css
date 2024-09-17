@@ -104,6 +104,44 @@ body {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  z-index: 1; /* Default value, adjust per trait */
+}
+
+/* Example z-index for different traits */
+.avatar-canvas img.background {
+  z-index: 1; /* Background goes at the lowest layer */
+}
+
+.avatar-canvas img.clothing {
+  z-index: 2; /* Clothing goes on top of background */
+}
+
+.avatar-canvas img.face {
+  z-index: 3; /* Face goes above clothing */
+}
+
+.avatar-canvas img.mouth {
+  z-index: 5; /* Mouth goes on top of face */
+}
+
+.avatar-canvas img.hat {
+  z-index: 6; /* Hat on top of fce */
+}
+
+.avatar-canvas img.eyes {
+  z-index: 4; /* Eyes go on top of hat */
+}
+
+.avatar-canvas img.accessories {
+  z-index: 6; /* Accessories goes above everything else */
+}
+
+
+.avatar-canvas img.trait {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 /* Download Button */
